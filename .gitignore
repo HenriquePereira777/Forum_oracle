@@ -1,0 +1,17 @@
+# IDEs
+.vscode/
+.idea/
+
+# MacOS
+.DS_Store
+
+# Logs e arquivos temporários
+*.log
+*.tmp
+*.swp\
+
+# Java
+*.class
+*.jar
+*.war
+*.iml
