@@ -22,7 +22,7 @@ public class Usuario implements UserDetails {
     private String nome;
 
     @Column(unique = true)
-    private String email;
+    private String login;
 
     private String senha;
     @ManyToMany(fetch = FetchType.EAGER)
@@ -37,7 +37,7 @@ public class Usuario implements UserDetails {
 
     public Usuario(String nome, String email, String senha, Set<Perfil> perfis) {
         this.nome = nome;
-        this.email = email;
+        this.login = email;
         this.senha = senha;
         this.perfis = perfis;
     }
@@ -55,27 +55,27 @@ public class Usuario implements UserDetails {
 
     @Override
     public String getUsername() {
-        return this.email;
+        return this.login;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return true;
+        return UserDetails.super.isAccountNonExpired();
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return true;
+        return UserDetails.super.isAccountNonLocked();
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return true;
+        return UserDetails.super.isCredentialsNonExpired();
     }
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return UserDetails.super.isEnabled();
     }
 }
 
