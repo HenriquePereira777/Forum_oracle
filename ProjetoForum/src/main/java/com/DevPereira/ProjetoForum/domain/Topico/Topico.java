@@ -49,9 +49,9 @@ public class Topico {
         public Topico(String titulo, String mensagem,  Usuario autor, Curso curso) {
                 this.titulo = titulo;
                 this.mensagem = mensagem;
+                this.status = "ABERTO";
                 this.autor = autor;
                 this.curso = curso;
-                this.status = "ABERTO";
                 this.dataCriacao = LocalDateTime.now();
 
         }

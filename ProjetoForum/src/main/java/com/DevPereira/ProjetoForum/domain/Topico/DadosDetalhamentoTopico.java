@@ -8,9 +8,10 @@ public record DadosDetalhamentoTopico(String titulo, String mensagem, LocalDateT
                 detalhamento.getTitulo(),
                 detalhamento.getMensagem(),
                 detalhamento.getDataCriacao(),
+                detalhamento.getStatus(),
                 detalhamento.getAutor().getNome(),
-                detalhamento.getCurso().getNome(),
-                detalhamento.getStatus()
+                detalhamento.getCurso().getNome()
+
         );
     }
 }
